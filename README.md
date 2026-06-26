@@ -1,6 +1,11 @@
 # Hardik Abrol — Portfolio
 
+[![Live Site](https://img.shields.io/badge/Live-Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://hardik-abrol-portfolio.vercel.app)
+
 A premium, animated personal portfolio built with React, Vite, Tailwind CSS, and Framer Motion. Content is sourced from Hardik's resume and GitHub (`github.com/Hardikabrol8`).
+
+**Live Website:** [https://hardik-abrol-portfolio.vercel.app](https://hardik-abrol-portfolio.vercel.app)
+
 
 **Run it locally:**
 
