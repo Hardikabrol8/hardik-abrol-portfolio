@@ -23,7 +23,7 @@ export const projects = [
       { label: "Live test users served", value: "200+" },
     ],
     githubUrl: "https://github.com/Hardikabrol8/Mental_Health_Predictor",
-    liveUrl: "https://mental-health-predictor-app-n1lays1ngh.streamlit.app/",
+    liveUrl: "https://mentalhealthpredictor07.streamlit.app/",
     source: "resume + github",
     featured: true,
   },
