@@ -44,4 +44,4 @@ export function staggerContainer(staggerAmount = 0.12, delay = 0) {
   };
 }
 
-export const viewportOnce = { once: true, amount: 0.2 };
+export const viewportOnce = { once: true, amount: 0.05 };
