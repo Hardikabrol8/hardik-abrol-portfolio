@@ -14,7 +14,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="$ ls -la projects/"
           title="Featured Projects"
-          subtitle="Pulled straight from GitHub and cross-checked against the resume — best and most complete first."
+          subtitle="A showcase of software engineering, database design, and machine learning projects I've built from the ground up."
         />
 
         <motion.div
