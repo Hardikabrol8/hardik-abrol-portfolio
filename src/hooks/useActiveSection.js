@@ -14,25 +14,45 @@ export function useActiveSection(sectionIds, options = {}) {
 
     if (elements.length === 0) return;
 
+    // Keep track of the visible height of all observed sections
+    const visibleHeights = {};
+
     const observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleHeights[entry.target.id] = entry.intersectionRect.height;
+          } else {
+            delete visibleHeights[entry.target.id];
+          }
+        });
 
-        if (visible.length > 0) {
-          setActiveId(visible[0].target.id);
+        // Find the section with the largest visible height in the viewport
+        let maxId = null;
+        let maxHeight = -1;
+
+        Object.entries(visibleHeights).forEach(([id, height]) => {
+          if (height > maxHeight) {
+            maxHeight = height;
+            maxId = id;
+          }
+        });
+
+        if (maxId) {
+          setActiveId(maxId);
         }
       },
       {
-        rootMargin: "-20% 0px -55% 0px",
-        threshold: [0.1, 0.25, 0.5, 0.75],
+        rootMargin: "-20% 0px -40% 0px",
+        threshold: Array.from({ length: 21 }, (_, i) => i / 20),
         ...options,
       }
     );
 
     elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, [sectionIds, options]);
 
   return activeId;
