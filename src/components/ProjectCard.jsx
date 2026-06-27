@@ -42,9 +42,6 @@ export default function ProjectCard({ project, index }) {
           <span className="font-mono-sig text-5xl font-bold text-white/10">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="font-mono-sig text-xs text-[var(--color-accent)]">
-            {project.source === "github only" ? "// github exclusive" : "// resume + github"}
-          </span>
           <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-[var(--color-accent)]/20 blur-2xl transition-transform duration-500 group-hover:scale-125" />
         </div>
 

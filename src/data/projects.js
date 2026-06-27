@@ -78,7 +78,7 @@ export const projects = [
     liveUrl: "https://topsis-khaki.vercel.app/",
     pypiUrl: "https://pypi.org/project/Topsis-Hardik-102303945/",
     source: "github only",
-    featured: false,
+    featured: true,
   },
   {
     id: "youtube-mashup",
@@ -130,7 +130,7 @@ export const projects = [
       { label: "Models Implemented", value: "6" },
     ],
     githubUrl: "https://github.com/Hardikabrol8/HAR_project",
-    liveUrl: "https://colab.research.google.com/github/Hardikabrol8/HAR_project/blob/main/HAR_Training.ipynb",
+    liveUrl: null,
     source: "github only",
     featured: true,
   },
