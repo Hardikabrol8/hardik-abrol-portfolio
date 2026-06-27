@@ -80,4 +80,58 @@ export const projects = [
     source: "github only",
     featured: false,
   },
+  {
+    id: "youtube-mashup",
+    title: "YouTube Audio Mashup Service",
+    tagline: "Multiprocessed Flask web application and CLI that downloads, clips, and merges YouTube audio.",
+    description:
+      "A high-speed audio manipulation tool that processes concurrent YouTube audio stream extractions using yt-dlp and applies clipping, mixing, and merging via pydub and FFmpeg, delivering the final MP3 via secure SMTP email.",
+    overview:
+      "A multiprocessed audio service built with Flask. Users input an artist name, number of songs, and segment duration. The app bypasses video stream frames to save 10x network bandwidth, checks for video lengths to skip long compilations, and is fully containerized with Docker.",
+    features: [
+      "Bandwidth-efficient audio stream bypass (skips video rendering)",
+      "Automatic duration filter to exclude mix compilations (>10m)",
+      "CLI tool + interactive glassmorphism Flask dashboard with progress tracking",
+      "Multiprocessed temporary workspace management with auto-cleanup",
+      "Secure SMTP email integration for remote file delivery",
+    ],
+    challenges:
+      "YouTube rate-limiting and high CPU overhead for audio clipping are main blockers. Solved by integrating automated retries, timeout parameters, and browser cookie exports, and isolated the audio math from I/O layers to process merging in parallel threads.",
+    tech: ["Python", "Flask", "yt-dlp", "Pydub", "FFmpeg", "Docker", "Bootstrap"],
+    metrics: [
+      { label: "Network Bandwidth Savings", value: "10x" },
+      { label: "Architecture", value: "Multithreaded" },
+    ],
+    githubUrl: "https://github.com/Hardikabrol8/youtube_mashup",
+    liveUrl: null,
+    source: "github only",
+    featured: true,
+  },
+  {
+    id: "har-project",
+    title: "Human Activity Recognition (HAR)",
+    tagline: "Classifies physical activities from smartphone sensor data using classical ML and Deep Learning.",
+    description:
+      "An end-to-end Machine Learning pipeline that processes accelerometer and gyroscope time-series data from the UCI HAR dataset to classify daily human activities across 6 model architectures.",
+    overview:
+      "Compares a classical Random Forest baseline against 5 distinct neural network models (MLP, 1D-CNN, Simple RNN, LSTM, and Hybrid CNN-LSTM) to analyze gradient behaviors and spatial-temporal pattern extraction on sequential sensor data.",
+    features: [
+      "Baseline Random Forest classifier & fully-connected MLP",
+      "1D-CNN implementation for spatial sensor correlation mapping",
+      "Vanishing gradient comparative studies (Simple RNN vs. LSTM)",
+      "Hybrid CNN-LSTM network for joint spatial-temporal modeling",
+      "Interactive Google Colab notebook with GPU-acceleration support",
+    ],
+    challenges:
+      "Time-series sensor sequences of length 561 caused severe vanishing gradient decay in Simple RNNs (limiting accuracy to 64.88%). Solved by introducing LSTM gate states and downsampling sequences via 1D convolutional layers in a hybrid CNN-LSTM architecture to reach 87.04%, with standalone 1D-CNN reaching a peak test accuracy of 96.00%.",
+    tech: ["Python", "TensorFlow", "Keras", "Scikit-Learn", "Matplotlib", "Jupyter"],
+    metrics: [
+      { label: "Peak Test Accuracy", value: "96.00%" },
+      { label: "Models Implemented", value: "6" },
+    ],
+    githubUrl: "https://github.com/Hardikabrol8/HAR_project",
+    liveUrl: "https://colab.research.google.com/github/Hardikabrol8/HAR_project/blob/main/HAR_Training.ipynb",
+    source: "github only",
+    featured: true,
+  },
 ];
