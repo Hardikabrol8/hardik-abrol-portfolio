@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail, FiHeart } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiHeart } from "react-icons/fi";
 import Container from "../components/Container";
 import { navLinks } from "../constants/navLinks";
 import { socials } from "../data/socials";
@@ -31,6 +31,7 @@ export default function Footer() {
           {[
             { Icon: FiGithub, href: socials.github },
             { Icon: FiLinkedin, href: socials.linkedin },
+            { Icon: FiInstagram, href: socials.instagram },
             { Icon: FiMail, href: `mailto:${socials.email}` },
           ].map(({ Icon, href }, idx) => (
             <a

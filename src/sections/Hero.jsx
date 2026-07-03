@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiArrowRight, FiDownload } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiArrowRight, FiDownload } from "react-icons/fi";
 import { SiPython, SiReact, SiPytorch, SiLangchain } from "react-icons/si";
 import Container from "../components/Container";
 import Button from "../components/Button";
@@ -76,6 +76,7 @@ export default function Hero() {
             {[
               { Icon: FiGithub, href: socials.github, label: "GitHub" },
               { Icon: FiLinkedin, href: socials.linkedin, label: "LinkedIn" },
+              { Icon: FiInstagram, href: socials.instagram, label: "Instagram" },
               { Icon: FiMail, href: `mailto:${socials.email}`, label: "Email" },
             ].map(({ Icon, href, label }) => (
               <motion.a

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiMapPin } from "react-icons/fi";
 import Container from "../components/Container";
 import SectionHeading from "../components/SectionHeading";
 import ContactForm from "../components/ContactForm";
@@ -9,8 +9,8 @@ import { fadeUp, slideInLeft, staggerContainer, viewportOnce } from "../animatio
 const DETAILS = [
   { Icon: FiGithub, label: "GitHub", value: "Hardikabrol8", href: socials.github },
   { Icon: FiLinkedin, label: "LinkedIn", value: "hardik-abrol", href: socials.linkedin },
+  { Icon: FiInstagram, label: "Instagram", value: "hardik_.abrol", href: socials.instagram },
   { Icon: FiMail, label: "Email", value: socials.email, href: `mailto:${socials.email}` },
-  { Icon: FiPhone, label: "Phone", value: socials.phone, href: `tel:${socials.phone.replace(/\s/g, "")}` },
   { Icon: FiMapPin, label: "Location", value: socials.location, href: null },
 ];
 
