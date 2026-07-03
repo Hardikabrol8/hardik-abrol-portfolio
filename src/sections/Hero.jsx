@@ -109,9 +109,9 @@ export default function Hero() {
           <div className="absolute inset-6 rounded-full bg-gradient-to-br from-[var(--color-primary)]/40 to-[var(--color-accent)]/30 blur-2xl" />
 
           <div className="glass absolute inset-8 overflow-hidden rounded-full border border-[var(--color-border)] shadow-2xl shadow-black/40">
-            <img 
-              src={profileImg} 
-              alt="Hardik Abrol" 
+            <img
+              src={profileImg}
+              alt="Hardik Abrol"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>

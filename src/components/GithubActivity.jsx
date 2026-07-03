@@ -32,18 +32,24 @@ export default function GithubActivity() {
       <motion.div variants={fadeUp} className="mt-6 grid gap-5 lg:grid-cols-2">
         <div className="glass rounded-2xl border border-[var(--color-border)] p-4">
           <img
-            src={`https://github-readme-stats.vercel.app/api?username=${USERNAME}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=22D3EE&icon_color=4F46E5&text_color=94A3B8`}
+            src={`https://raw.githubusercontent.com/${USERNAME}/${USERNAME}/main/profile/stats.svg`}
             alt="Hardik Abrol's GitHub stats"
             loading="lazy"
             className="mx-auto w-full max-w-md"
+            onError={(e) => {
+              e.currentTarget.src = `https://github-readme-stats.vercel.app/api?username=${USERNAME}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=22D3EE&icon_color=4F46E5&text_color=94A3B8`;
+            }}
           />
         </div>
         <div className="glass rounded-2xl border border-[var(--color-border)] p-4">
           <img
-            src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${USERNAME}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=22D3EE&text_color=94A3B8`}
+            src={`https://raw.githubusercontent.com/${USERNAME}/${USERNAME}/main/profile/top-langs.svg`}
             alt="Hardik Abrol's most used languages"
             loading="lazy"
             className="mx-auto w-full max-w-md"
+            onError={(e) => {
+              e.currentTarget.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=${USERNAME}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=22D3EE&text_color=94A3B8`;
+            }}
           />
         </div>
       </motion.div>

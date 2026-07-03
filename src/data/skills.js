@@ -1,24 +1,36 @@
 import {
   SiPython,
+  SiTypescript,
   SiCplusplus,
   SiJavascript,
   SiHtml5,
   SiReact,
+  SiNextdotjs,
+  SiVite,
+  SiTailwindcss,
+  SiFramer,
+  SiGreensock,
   SiFastapi,
   SiFlask,
+  SiSqlalchemy,
   SiMysql,
+  SiSqlite,
   SiPandas,
   SiNumpy,
+  SiPlotly,
   SiGit,
   SiGithub,
+  SiDocker,
+  SiGooglechrome,
   SiHuggingface,
   SiPytorch,
   SiScikitlearn,
   SiJupyter,
   SiStreamlit,
   SiLangchain,
+  SiVercel,
 } from "react-icons/si";
-import { FaAws, FaDatabase, FaBrain } from "react-icons/fa";
+import { FaAws, FaDatabase, FaBrain, FaCss3Alt, FaChartArea, FaTree } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
 
 export const skillGroups = [
@@ -28,19 +40,25 @@ export const skillGroups = [
     prompt: "$ ls languages/",
     skills: [
       { name: "Python", icon: SiPython },
-      { name: "C++", icon: SiCplusplus },
+      { name: "TypeScript", icon: SiTypescript },
       { name: "JavaScript", icon: SiJavascript },
+      { name: "C++", icon: SiCplusplus },
       { name: "SQL", icon: TbSql },
+      { name: "HTML5", icon: SiHtml5 },
+      { name: "CSS3", icon: FaCss3Alt },
     ],
   },
   {
     id: "frontend",
-    label: "Frontend",
+    label: "Frontend & UI",
     prompt: "$ ls frontend/",
     skills: [
       { name: "React", icon: SiReact },
-      { name: "HTML5", icon: SiHtml5 },
-      { name: "JavaScript", icon: SiJavascript },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Vite", icon: SiVite },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Framer Motion", icon: SiFramer },
+      { name: "GSAP", icon: SiGreensock },
     ],
   },
   {
@@ -50,6 +68,7 @@ export const skillGroups = [
     skills: [
       { name: "FastAPI", icon: SiFastapi },
       { name: "Flask", icon: SiFlask },
+      { name: "SQLAlchemy", icon: SiSqlalchemy },
     ],
   },
   {
@@ -63,6 +82,7 @@ export const skillGroups = [
       { name: "Hugging Face", icon: SiHuggingface },
       { name: "PyTorch", icon: SiPytorch },
       { name: "Scikit-learn", icon: SiScikitlearn },
+      { name: "CatBoost", icon: FaTree },
     ],
   },
   {
@@ -71,17 +91,21 @@ export const skillGroups = [
     prompt: "$ ls databases/",
     skills: [
       { name: "MySQL", icon: SiMysql },
+      { name: "SQLite", icon: SiSqlite },
       { name: "PL/SQL", icon: FaDatabase },
     ],
   },
   {
-    id: "frameworks",
-    label: "Frameworks & Libraries",
-    prompt: "$ ls frameworks/",
+    id: "data-tools",
+    label: "Data & Visualization",
+    prompt: "$ ls data_tools/",
     skills: [
       { name: "Pandas", icon: SiPandas },
       { name: "NumPy", icon: SiNumpy },
+      { name: "Matplotlib", icon: FaChartArea },
+      { name: "Plotly", icon: SiPlotly },
       { name: "Streamlit", icon: SiStreamlit },
+      { name: "Jupyter Notebook", icon: SiJupyter },
     ],
   },
   {
@@ -91,22 +115,17 @@ export const skillGroups = [
     skills: [
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
-      { name: "Jupyter Notebook", icon: SiJupyter },
+      { name: "Docker", icon: SiDocker },
+      { name: "Browser Extensions", icon: SiGooglechrome },
     ],
   },
   {
     id: "cloud",
-    label: "Cloud",
+    label: "Cloud & Deployment",
     prompt: "$ ls cloud/",
-    skills: [{ name: "AWS", icon: FaAws }],
-  },
-  {
-    id: "vcs",
-    label: "Version Control",
-    prompt: "$ ls vcs/",
     skills: [
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
+      { name: "AWS", icon: FaAws },
+      { name: "Vercel", icon: SiVercel },
     ],
   },
 ];

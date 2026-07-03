@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const FALLBACK = {
-  public_repos: 11,
-  followers: 1,
+  public_repos: 14,
+  followers: 0,
   following: 0,
 };
 

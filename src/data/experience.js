@@ -1,7 +1,7 @@
 export const experience = [
   {
     id: "gstech",
-    company: "GSTech Technology Pvt Ltd",
+    company: "GSTech Technology Pvt Ltd (AdSpyder)",
     role: "Intern — Web Developer (Remote)",
     location: "Bengaluru, Karnataka",
     period: "Jun 2026 — Present",

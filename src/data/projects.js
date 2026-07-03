@@ -1,5 +1,34 @@
 export const projects = [
   {
+    id: "athlyt",
+    title: "Athlyt",
+    tagline: "AI-powered fitness coaching platform — personalized plans, nutrition tracking, and progress analytics.",
+    description:
+      "My flagship full-stack + ML build: an AI-powered fitness coaching platform delivering personalized workout plans, nutrition tracking, progress analytics, and workout session management, shipped as a production-quality app with 220 passing backend tests and CI on every push.",
+    overview:
+      "Athlyt pairs a Next.js 15 frontend with a FastAPI backend and a scikit-learn model trained offline in Colab. The architecture flows from the browser through a router → service → repository → SQLAlchemy ORM layer, keeping business logic, data access, and ML inference cleanly separated. It ships with an onboarding wizard, rule-based workout and meal-plan generation, streaks and personal records, a 365-day activity heatmap, and full JWT auth.",
+    features: [
+      "JWT auth with onboarding wizard, BMI & daily calorie estimation (Mifflin-St Jeor)",
+      "Rule-based workout split recommendation with dynamic weekly plan generation and session tracking",
+      "Streaks, personal records, weekly volume, and a 365-day activity heatmap",
+      "Weight/body fat/sleep logging with trend charts and body measurements",
+      "Rule-based meal plan generation (non-veg/vegetarian/vegan) with daily macro logging",
+      "220 passing backend tests with CI pipelines for both frontend and backend",
+    ],
+    challenges:
+      "Keeping a full-stack ML app maintainable meant isolating concerns early — a router → service → repository layering on the backend so the ML inference layer, business rules, and data access never leaked into each other, and a joblib-loaded scikit-learn model kept out of the request path except at startup.",
+    tech: ["Next.js 15", "TypeScript", "Tailwind CSS", "FastAPI", "SQLAlchemy", "scikit-learn", "PostgreSQL"],
+    metrics: [
+      { label: "Backend tests", value: "220 passing" },
+      { label: "CI", value: "Frontend + Backend" },
+    ],
+    githubUrl: "https://github.com/Hardikabrol8/Athlyt",
+    liveUrl: "https://athlyt-taupe.vercel.app",
+    apiDocsUrl: "https://athlyt-backend.onrender.com/docs",
+    source: "github",
+    featured: true,
+  },
+  {
     id: "mental-health-predictor",
     title: "Mental Health Predictor App",
     tagline:

@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { FiGithub, FiExternalLink, FiPackage, FiChevronDown } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiPackage, FiFileText, FiChevronDown } from "react-icons/fi";
 import TechBadge from "./TechBadge";
 import { fadeUp } from "../animations/variants";
 
@@ -142,6 +142,16 @@ export default function ProjectCard({ project, index }) {
               className="flex items-center gap-1.5 text-sm font-medium text-[var(--color-text)] transition-colors hover:text-[var(--color-accent)]"
             >
               <FiPackage /> PyPI
+            </a>
+          )}
+          {project.apiDocsUrl && (
+            <a
+              href={project.apiDocsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm font-medium text-[var(--color-text)] transition-colors hover:text-[var(--color-accent)]"
+            >
+              <FiFileText /> API Docs
             </a>
           )}
         </div>
