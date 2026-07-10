@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1560 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1560" height="340" fill="url(#bg)"/>
+
+  <g stroke="#1E293B" stroke-width="1" opacity="0.5">
+    <path d="M0 60H1560"/><path d="M0 140H1560"/><path d="M0 220H1560"/><path d="M0 300H1560"/>
+    <path d="M200 0V340"/><path d="M500 0V340"/><path d="M800 0V340"/><path d="M1100 0V340"/><path d="M1400 0V340"/>
+  </g>
+
+  <!-- connectors -->
+  <g stroke="url(#edge)" stroke-width="2.5" fill="none" opacity="0.85">
+    <path d="M260 140 L660 178"/>
+    <path d="M260 260 L660 202"/>
+    <path d="M900 178 L1300 140"/>
+    <path d="M900 202 L1300 260"/>
+  </g>
+  <g fill="#22D3EE">
+    <circle cx="660" cy="178" r="4"/><circle cx="660" cy="202" r="4"/>
+    <circle cx="900" cy="178" r="4"/><circle cx="900" cy="202" r="4"/>
+  </g>
+
+  <!-- User entity -->
+  <g filter="url(#glow)">
+    <rect x="60" y="100" width="200" height="80" rx="14" fill="#111827" stroke="#4F46E5" stroke-width="1.5"/>
+  </g>
+  <text x="160" y="134" font-family="monospace" font-size="17" font-weight="700" fill="#E2E8F0" text-anchor="middle">User</text>
+  <text x="160" y="157" font-family="monospace" font-size="12" fill="#94A3B8" text-anchor="middle">id · name · phone</text>
+
+  <!-- Admin entity -->
+  <g filter="url(#glow)">
+    <rect x="60" y="220" width="200" height="80" rx="14" fill="#111827" stroke="#4F46E5" stroke-width="1.5"/>
+  </g>
+  <text x="160" y="254" font-family="monospace" font-size="17" font-weight="700" fill="#E2E8F0" text-anchor="middle">Admin</text>
+  <text x="160" y="277" font-family="monospace" font-size="12" fill="#94A3B8" text-anchor="middle">id · role · location_id</text>
+
+  <!-- Booking entity (center) -->
+  <g filter="url(#glow)">
+    <rect x="660" y="105" width="240" height="170" rx="18" fill="#111827" stroke="#22D3EE" stroke-width="2.5"/>
+  </g>
+  <text x="780" y="150" font-family="monospace" font-size="21" font-weight="700" fill="#F1F5F9" text-anchor="middle">Booking</text>
+  <text x="780" y="178" font-family="monospace" font-size="13" fill="#94A3B8" text-anchor="middle">user_id · bike_id</text>
+  <text x="780" y="198" font-family="monospace" font-size="13" fill="#94A3B8" text-anchor="middle">start · end · status</text>
+  <text x="780" y="240" font-family="monospace" font-size="12" font-weight="700" fill="#67E8F9" text-anchor="middle">BCNF NORMALIZED</text>
+
+  <!-- Bike entity -->
+  <g filter="url(#glow)">
+    <rect x="1300" y="100" width="200" height="80" rx="14" fill="#111827" stroke="#4F46E5" stroke-width="1.5"/>
+  </g>
+  <text x="1400" y="134" font-family="monospace" font-size="17" font-weight="700" fill="#E2E8F0" text-anchor="middle">Bike</text>
+  <text x="1400" y="157" font-family="monospace" font-size="12" fill="#94A3B8" text-anchor="middle">id · type · status</text>
+
+  <!-- Payment entity -->
+  <g filter="url(#glow)">
+    <rect x="1300" y="220" width="200" height="80" rx="14" fill="#111827" stroke="#4F46E5" stroke-width="1.5"/>
+  </g>
+  <text x="1400" y="254" font-family="monospace" font-size="17" font-weight="700" fill="#E2E8F0" text-anchor="middle">Payment</text>
+  <text x="1400" y="277" font-family="monospace" font-size="12" fill="#94A3B8" text-anchor="middle">booking_id · amount</text>
+
+  <!-- top label -->
+  <text x="40" y="42" font-family="monospace" font-size="24" font-weight="700" fill="#F1F5F9">Bike Rental System</text>
+  <text x="470" y="42" font-family="monospace" font-size="14" fill="#67E8F9">$ schema --er-diagram --normal-form BCNF</text>
+</svg>

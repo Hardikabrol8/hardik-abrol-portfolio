@@ -37,12 +37,27 @@ export default function ProjectCard({ project, index }) {
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
         className="glass glow-border group relative h-full overflow-hidden rounded-2xl border border-[var(--color-border)] p-7"
       >
-        {/* placeholder project "image" — abstract gradient panel with index mark */}
-        <div className="relative mb-6 flex h-36 items-center justify-between overflow-hidden rounded-xl border border-[var(--color-border)] bg-gradient-to-br from-[var(--color-primary)]/25 via-[var(--color-card)] to-[var(--color-accent)]/15 px-6">
-          <span className="font-mono-sig text-5xl font-bold text-white/10">
+        <div className="relative mb-6 h-48 overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-card)]">
+          {project.image ? (
+            <img
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              loading="lazy"
+              className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${
+                project.imageFit === "contain" ? "object-contain" : "object-cover"
+              } ${project.imagePosition === "center" ? "object-center" : "object-top"}`}
+            />
+          ) : (
+            <div className="flex h-full items-center justify-between bg-gradient-to-br from-[var(--color-primary)]/25 via-[var(--color-card)] to-[var(--color-accent)]/15 px-6">
+              <span className="font-mono-sig text-5xl font-bold text-white/10">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+            </div>
+          )}
+          <span className="absolute right-3 top-3 rounded-full bg-black/50 px-2.5 py-1 font-mono-sig text-xs font-bold text-white/80 backdrop-blur-sm">
             {String(index + 1).padStart(2, "0")}
           </span>
-          <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-[var(--color-accent)]/20 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[var(--color-card)] to-transparent" />
         </div>
 
         <div className="flex items-start justify-between gap-3">

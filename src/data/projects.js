@@ -1,6 +1,15 @@
+import athlytImg from "../assets/images/projects/athlyt.jpg";
+import mentalHealthImg from "../assets/images/projects/mental-health-predictor.jpg";
+import bikeRentalImg from "../assets/images/projects/bike-rental-system.svg";
+import topsisImg from "../assets/images/projects/topsis.jpg";
+import youtubeMashupImg from "../assets/images/projects/youtube-mashup.jpg";
+import harProjectImg from "../assets/images/projects/har-project.jpg";
+
 export const projects = [
   {
     id: "athlyt",
+    image: athlytImg,
+    imagePosition: "center",
     title: "Athlyt",
     tagline: "AI-powered fitness coaching platform — personalized plans, nutrition tracking, and progress analytics.",
     description:
@@ -30,6 +39,7 @@ export const projects = [
   },
   {
     id: "mental-health-predictor",
+    image: mentalHealthImg,
     title: "Mental Health Predictor App",
     tagline:
       "Interpretable ML system that flags individuals who may need clinical mental health support.",
@@ -58,6 +68,8 @@ export const projects = [
   },
   {
     id: "bike-rental-system",
+    image: bikeRentalImg,
+    imagePosition: "center",
     title: "Bike Rental System",
     tagline: "A normalized relational database engineered for real-time shared-mobility operations.",
     description:
@@ -84,6 +96,7 @@ export const projects = [
   },
   {
     id: "topsis",
+    image: topsisImg,
     title: "TOPSIS Decision-Ranking Toolkit",
     tagline: "A CLI, a published PyPI package, and a hosted web service for multi-criteria decision analysis.",
     description:
@@ -111,6 +124,7 @@ export const projects = [
   },
   {
     id: "youtube-mashup",
+    image: youtubeMashupImg,
     title: "YouTube Audio Mashup Service",
     tagline: "Multiprocessed Flask web application and CLI that downloads, clips, and merges YouTube audio.",
     description:
@@ -138,6 +152,7 @@ export const projects = [
   },
   {
     id: "har-project",
+    image: harProjectImg,
     title: "Human Activity Recognition (HAR)",
     tagline: "Classifies physical activities from smartphone sensor data using classical ML and Deep Learning.",
     description:
