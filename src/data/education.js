@@ -4,7 +4,7 @@ export const education = [
     school: "Thapar Institute of Engineering and Technology",
     location: "Patiala, India",
     degree: "Bachelor of Engineering, Computer Engineering",
-    detail: "CGPA: 7.62 / 10",
+    detail: "CGPA: 7.64 / 10",
     period: "Aug 2023 — May 2027",
   },
   {

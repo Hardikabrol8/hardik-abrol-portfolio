@@ -9,7 +9,7 @@ export const aboutText = {
 };
 
 export const stats = [
-  { label: "CGPA", value: "7.62", suffix: "/10" },
+  { label: "CGPA", value: "7.64", suffix: "/10" },
   { label: "GitHub Repositories", value: "14", suffix: "+" },
   { label: "Certifications", value: "2", suffix: "" },
   { label: "Live Projects Shipped", value: "3", suffix: "" },
